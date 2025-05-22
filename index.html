@@ -38,7 +38,7 @@
         <p class="text-gray-700 leading-relaxed mt-1">
             Outside of work, I like to spend my time outdoors, mostly mountain biking on downhill and enduro trails, or just cycling and hiking.
             Beyond that, I really appreciate travelling, as I enjoy experiencing different cultures and cuisines.
-            I try to capture those experiences and the incredible diversity our world has to offer through photos.
+            I try to capture those experiences and the incredible diversity our world has to offer through photos - see below for a few examples from my recent trips.
             When not travelling or riding bikes, I challenge myself in the gym doing functional training and yoga.
             On a more technical note, I'm always trying to stay current with AI advancements, particularly their real-world applications, to see how they can boost my skills and improve the products I contribute to.
             I also follow developments in the energy transition – everything from EVs to changes in our electricity grids and power sources.</p>
@@ -207,9 +207,70 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Gallery</h2>
+        
+        <div class="relative max-w-3xl mx-auto">
+            <!-- Main Image Container -->
+            <div class="relative h-[720px] overflow-hidden rounded-lg shadow-lg bg-gray-100">
+                <img 
+                    id="galleryImage"
+                    src="resources/gallery-1.jpg"
+                    alt="Gallery image"
+                    class="w-full h-full object-contain"
+                    onload="this.style.opacity='1'"
+                    style="opacity: 0; transition: opacity 0.3s ease-in-out;"
+                />
+                
+                <!-- Navigation Buttons -->
+                <button 
+                    onclick="changeImage(-1)" 
+                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+                    aria-label="Previous image">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                
+                <button 
+                    onclick="changeImage(1)" 
+                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+                    aria-label="Next image">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Image Counter -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                <span id="currentImage">1</span>/8
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="text-center text-gray-600 text-sm pt-8 border-t border-gray-200">
         <p>© 2025 Maciej Piekarski. All rights reserved.</p>
     </footer>
 </div>
+
+<script>
+    let currentImageIndex = 1;
+    let totalImages = 8;
+
+    function changeImage(direction) {
+        const imgElement = document.getElementById('galleryImage');
+        // Start fade out
+        imgElement.style.opacity = '0';
+        
+        setTimeout(() => {
+            nextImageIndex = currentImageIndex + direction;
+            currentImageIndex = nextImageIndex > totalImages ? 1 : nextImageIndex;
+            imgElement.src = `resources/gallery-${currentImageIndex}.jpg`;
+            document.getElementById('currentImage').textContent = currentImageIndex;
+        }, 300); // Wait for fade out to complete
+    }
+</script>
 </body>
