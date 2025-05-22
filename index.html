@@ -216,7 +216,7 @@
             <div class="relative h-[720px] overflow-hidden rounded-lg shadow-lg bg-gray-100">
                 <img 
                     id="galleryImage"
-                    src="resources/gallery-1.jpg"
+                    src=""
                     alt="Gallery image"
                     class="w-full h-full object-contain"
                     onload="this.style.opacity='1'"
@@ -224,19 +224,23 @@
                 />
                 
                 <!-- Navigation Buttons -->
-                <button 
-                    onclick="changeImage(-1)" 
-                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                    aria-label="Previous image">
+                <button
+                    id="prevButton"
+                    onclick="changeImage(-1)"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 opacity-0"
+                    aria-label="Previous image"
+                    disabled>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
                 </button>
                 
-                <button 
-                    onclick="changeImage(1)" 
-                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                    aria-label="Next image">
+                <button
+                    id="nextButton"
+                    onclick="changeImage(1)"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 opacity-0"
+                    aria-label="Next image"
+                    disabled>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
@@ -244,7 +248,8 @@
             </div>
             
             <!-- Image Counter -->
-            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+            <div id="imageCounter"
+                 class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm opacity-0">
                 <span id="currentImage">1</span>/8
             </div>
         </div>
@@ -259,6 +264,7 @@
 <script>
     let currentImageIndex = 1;
     let totalImages = 8;
+    let loadedImages = new Map();
 
     function changeImage(direction) {
         const imgElement = document.getElementById('galleryImage');
@@ -266,11 +272,68 @@
         imgElement.style.opacity = '0';
         
         setTimeout(() => {
-            nextImageIndex = currentImageIndex + direction;
-            currentImageIndex = nextImageIndex > totalImages ? 1 : nextImageIndex;
-            imgElement.src = `resources/gallery-${currentImageIndex}.jpg`;
+            currentImageIndex = currentImageIndex + direction;
+            if (currentImageIndex > totalImages) {
+                currentImageIndex = 1;
+            } else if (currentImageIndex < 1) {
+                currentImageIndex = totalImages; // Wrap to last
+            }
+            const loadedImage = loadedImages.get(currentImageIndex);
+            if (loadedImage) {
+                imgElement.src = loadedImage.src;
+            } else {
+                imgElement.src = `resources/gallery-${currentImageIndex}.jpg`;
+            }
             document.getElementById('currentImage').textContent = currentImageIndex;
         }, 300); // Wait for fade out to complete
     }
+
+    async function initGallery() {
+        loadImage(1).then(img => {
+            loadedImages.set(1, img);
+            const imgElement = document.getElementById('galleryImage');
+            imgElement.src = img.src;
+            imgElement.style.opacity = '1';
+
+            // Enable controls after the first image is loaded
+            document.getElementById('prevButton').style.opacity = '1';
+            document.getElementById('nextButton').style.opacity = '1';
+            document.getElementById('imageCounter').style.opacity = '1';
+            document.getElementById('prevButton').disabled = false;
+            document.getElementById('nextButton').disabled = false;
+
+            // Load the rest
+            preloadImages(2);
+        }).catch(error => {
+            console.error('Error loading first image:', error);
+            const counterElement = document.getElementById('imageCounter');
+            if (counterElement) {
+                counterElement.textContent = "Error loading gallery";
+                counterElement.style.opacity = '1';
+            }
+        });
+    }
+
+    async function preloadImages(startIndex) {
+        for (let i = startIndex; i <= totalImages; i++) {
+            try {
+                const img = await loadImage(i);
+                loadedImages.set(i, img);
+            } catch (error) {
+                console.error(`Error loading image ${i}:`, error);
+            }
+        }
+    }
+
+    function loadImage(imageId) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = `resources/gallery-${imageId}.jpg`;
+        });
+    }
+
+    initGallery();
 </script>
 </body>
