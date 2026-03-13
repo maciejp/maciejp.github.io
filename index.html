@@ -14,101 +14,328 @@
         </div>
         <h1 class="text-4xl font-bold text-gray-800 mb-2">Maciej Piekarski</h1>
         <p class="text-xl text-gray-600">Engineer by trade, product person by heart.</p>
+        <p class="text-sm text-gray-400 mt-2 italic">This page is intentionally detailed. It serves as the single source of truth about my professional background — feel free to use an AI agent to extract whatever you need from it.</p>
     </header>
 
     <!-- About Me -->
     <section class="mb-12">
         <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">About Me</h2>
         <p class="text-gray-700 leading-relaxed">
+            I love understanding problems and building solutions. In this order.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
             From helping my teams understand user needs, through defining requirements to building robust technical
             solutions, I approach product engineering with a focus on clarity and precision. I enjoy tackling complex
             problems by breaking them down and developing iterative, user-centric solutions that deliver tangible value.
         </p>
-        <p class="text-gray-700 leading-relaxed mt-1">
+        <p class="text-gray-700 leading-relaxed mt-3">
             My experience spans the full product lifecycle. I have been responsible for greenfield experiments that
-            evolved into successful, monetized products, as well as the development and maintenance of high-availability
-            IoT systems supporting over a million devices. This taught me how to balance technical excellence and rigor
+            evolved into successful, monetised products, as well as the development and maintenance of high-availability
+            IoT systems supporting millions of connected devices. This taught me how to balance technical excellence and rigour
             with lean execution and a high pace of innovation.
         </p>
-        <p class="text-gray-700 leading-relaxed mt-1">
-            I enjoy trying new tools and have practical experience applying them to improve team processes and strive to
-            find the simplest path to impactful solutions, driven by a clear understanding of both technical feasibility
-            and user needs.
+        <p class="text-gray-700 leading-relaxed mt-3">
+            I question requirements and push to understand the "why" behind every decision — to make sure everyone involved
+            shares the same understanding of the problem before jumping to solutions. I believe in having a name attached to
+            every requirement, because accountability drives clarity. When building products, I lean towards underpromising
+            and overdelivering. It sometimes puts us at a marketing disadvantage, but I'd rather have happy users than
+            inflated expectations.
         </p>
-        <p class="text-gray-700 leading-relaxed mt-1">
-            Outside of work, I like to spend my time outdoors, mostly mountain biking on downhill and enduro trails, or just cycling and hiking.
-            Beyond that, I really appreciate travelling, as I enjoy experiencing different cultures and cuisines.
-            I try to capture those experiences and the incredible diversity our world has to offer through photos - see below for a few examples from my recent trips.
-            When not travelling or riding bikes, I challenge myself in the gym doing functional training and yoga.
-            On a more technical note, I'm always trying to stay current with AI advancements, particularly their real-world applications, to see how they can boost my skills and improve the products I contribute to.
-            I also follow developments in the energy transition – everything from EVs to changes in our electricity grids and power sources.</p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            I look for solutions outside of software when they make more sense. At tado°, I pushed to replace legacy hardware
+            by breaking down the upfront replacement cost into yearly man-hours saved — removing dead code paths, reducing
+            support tickets, lowering mental overhead when reasoning about the product. It required a lot of convincing, but
+            I got it through.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            I always solve today's problems while keeping track of what can bite us in the future.
+        </p>
+    </section>
+
+    <!-- How I Think About Building Products -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">How I Think About Building Products</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            I hold strong opinions, loosely held. I'm always happy to adjust my thinking when presented with compelling
+            arguments — but I'd rather start from a clear position than from vague consensus.
+        </p>
+
+        <div class="space-y-4">
+            <div>
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold">Keep things as simple as possible, but not simpler.</span>
+                    The majority of problems don't require solutions that scale to millions of users. Solve today's problems.
+                    Be aware of what might block you in 12 months if things scale as expected — but don't solve that yet.
+                    Know where you cut corners, but don't immediately fix those places either. Martin Fowler's thinking on
+                    evolutionary design resonates with me — let the architecture emerge from real needs, not from speculation
+                    about future ones.
+                </p>
+            </div>
+            <div>
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold">The cost of experimentation recently dropped below the cost of discussion.</span>
+                    For many use cases, it's now cheaper to create the next iteration of a product, run it with real users,
+                    and evaluate its usefulness than to spend hours in meetings debating and inferring from interviews what
+                    users might want. I bias towards shipping and iterating.
+                </p>
+            </div>
+            <div>
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold">The cost of good documentation and tests dropped to below zero.</span>
+                    Crafting clear docs and tests using agents takes a fraction of the time it used to. Agents feed on context
+                    and work best with guardrails and short feedback loops — which means caring about documentation and test
+                    coverage actually makes agents more productive. It's a virtuous cycle.
+                </p>
+            </div>
+            <div>
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold">Innovation requires understanding real-world problems and knowing the capabilities of systems that can address them.</span>
+                    Product engineers shine because they have this overlap. Understanding both the user's pain and the technical
+                    toolbox is where the best solutions come from.
+                </p>
+            </div>
+            <div>
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold">Responsibility doesn't diffuse.</span>
+                    When I use agentic workflows, it's still me who's responsible for my commits. If a commit crafted by Claude
+                    breaks production and causes financial losses, it's on me, not on Claude. No "it was the tool, not me" —
+                    my mistake, I own it.
+                </p>
+            </div>
+        </div>
+
+        <p class="text-gray-700 leading-relaxed mt-4">
+            Dan North's idea of building "software that fits in your head" captures something I care about deeply — if you
+            can't reason about a system, you can't maintain it, and you definitely can't iterate on it fast.
+        </p>
+    </section>
+
+    <!-- How I Work With People -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">How I Work With People</h2>
+        <p class="text-gray-700 leading-relaxed">
+            I'm an individual contributor who leads through influence rather than authority. I recently mentored a more junior
+            colleague who appreciated my style: giving a lot of freedom while providing guidance when necessary and strong
+            opinions to prevent derailing — focused on measurable progress and delivering goals on time.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            I'm a terrible salesperson, unless I believe in something. Then my belief turns into genuine pitches. I've stood
+            on stage presenting products at conferences and to 50+ person audiences at weekly demos. The first minute is
+            stressful, but once I'm in, I enjoy it.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            I push for transparency and honesty about what our products do and how they work. I'd rather have a smaller,
+            accurate promise than a big, hollow one.
+        </p>
+    </section>
+
+    <!-- AI in Practice -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">AI in Practice</h2>
+        <p class="text-gray-700 leading-relaxed">
+            I use AI heavily to augment my workflow, running significantly more experiments at much higher velocity than before.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            At Wemolo, I introduced Claude into a production image analysis pipeline to detect anomalies. This required building
+            a testbench to provide guardrails and tune a non-deterministic system to behave consistently enough for production use.
+            The pipeline uses Ultralytics YOLO for image pre-processing to provide guidance to the model, and I experimented with
+            various approaches and models to get reliable results. I also deployed Ultralytics models directly in AWS Lambda (v26
+            runs well on CPUs, delivering decent results without GPU infrastructure).
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            Earlier, at tado°, I built one of the first practical AI pipelines on my team: a script using Whisper for transcription
+            and GPT for summarisation of customer interviews. This saved myself and colleagues significant time — tens of minutes
+            per interview — back when these tools had just been released.
+        </p>
+    </section>
+
+    <!-- Side Projects -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Side Projects</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">A few recent examples:</p>
+        <div class="space-y-4">
+            <div>
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold">MCP server for tado°</span> — A conversational interface to your heating system.
+                    Provides tools to create features lacking from the official product, like scenes. Built mostly to explore what
+                    the MCP hype in early 2025 was about.
+                </p>
+            </div>
+            <div>
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold">Classified ad manager</span> — A small tool for managing bike parts listings across
+                    Kleinanzeigen and bike-specific platforms. Stores the state of active ads and refreshes them on demand to keep
+                    them high in search results.
+                </p>
+            </div>
+            <div>
+                <p class="text-gray-700 leading-relaxed">
+                    <span class="font-semibold">"Should you get an AC?"</span> — A tool that pulls historical tado° data about
+                    bedroom climate, compares indoor temperatures to outdoor readings (was there unused cooling potential in just
+                    opening windows?), and summarises how many nights were uncomfortably warm — to guide the purchasing decision.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beyond the Screen -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Beyond the Screen</h2>
+        <p class="text-gray-700 leading-relaxed">
+            Outside of work, I spend most of my time outdoors — mostly mountain biking on downhill and enduro trails, or just
+            cycling and hiking. In early 2025 I took a sabbatical to travel and ride, including a month in British Columbia,
+            the mountain biking mecca. Beyond that, I enjoy experiencing different cultures and cuisines and try to capture the
+            diversity our world has to offer through photos.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            I love working on my bikes and I take pleasure in understanding how things work — both in the physical and virtual
+            world. Growing up, my father and I used to build and fly RC planes, back when that involved a lot of gluing and
+            soldering. That curiosity stuck. I often reason about how things behave from first principles and encourage others
+            to take this playful approach to understanding the world around them. It's both a fun learning experience outside of
+            work and something that propagates into my professional life — it makes me naturally question whether the system I'm
+            building isn't too complicated for what it's doing. I think that's the engineering mindset: build something that solves
+            the problem in the most elegant way. Elegance takes time to emerge — initially, it's fine for it to be a functional blob.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            When not travelling or riding bikes, I challenge myself in the gym with functional training and yoga.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            On a more technical note, I follow AI advancements closely, particularly their real-world applications, to see how
+            they can boost my skills and improve the products I contribute to. I follow the work of Andrej Karpathy and the team
+            behind Claude Code. In software engineering more broadly, I'm influenced by the thinking of Dan North and Martin Fowler.
+            I also follow developments in the energy transition — everything from EVs to changes in electricity grids and power sources.
+        </p>
     </section>
 
     <!-- Work Experience -->
     <section class="mb-12">
         <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Work Experience</h2>
 
-        <!-- tado° -->
+        <!-- Wemolo -->
         <div class="mb-8">
             <div class="mb-2">
                 <h3 class="text-xl font-semibold text-gray-800">Product Engineer</h3>
-                <p class="text-gray-600 text-sm">tado° | Feb 2020 - Feb 2025</p>
+                <p class="text-gray-600 text-sm">Wemolo | Munich | Sep 2025 - Present</p>
+            </div>
+            <p class="text-gray-700 mb-3">
+                Working on a greenfield project: the next generation of parking lot monitoring devices with capabilities beyond
+                license plate recognition. Think cameras with AI on the edge, feeding into more powerful vision-language models
+                in the cloud — a mix of Claude and other advanced AI models. The goal is to convert improvements in AI into
+                tangible benefits for parking lot owners and managers.
+            </p>
+            <p class="text-gray-700 mb-3">
+                Together with a small army of robots (mostly Claudes), I am responsible for infrastructure, CI/CD, backend,
+                frontend, communication with IoT devices — and anything else required to solve user problems as fast as possible.
+            </p>
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>Introduced Claude into a production image analysis pipeline for anomaly detection. Built a testbench to provide guardrails and tune the non-deterministic system for consistent production behaviour. Pre-processing with Ultralytics YOLO to provide guidance, experimenting with various approaches and models.</li>
+                <li>Deployed Ultralytics YOLO models in AWS Lambda (v26 optimised for CPU, delivering solid results without GPU infrastructure) as a proof of concept.</li>
+                <li>Designing the architecture for the next-generation device platform — edge AI processing combined with cloud-based VLMs for more complex analysis.</li>
+            </ul>
+            <p class="text-gray-500 text-sm mt-2">Tech: React (latest), Python, AWS Lambda, Terraform, Ultralytics YOLO, Claude API</p>
+        </div>
+
+        <!-- Sabbatical -->
+        <div class="mb-8">
+            <div class="mb-2">
+                <h3 class="text-xl font-semibold text-gray-800">Sabbatical</h3>
+                <p class="text-gray-600 text-sm">Feb 2025 - Aug 2025</p>
+            </div>
+            <p class="text-gray-700 mb-3">
+                Travelled and rode bikes. Highlights include a month-long trip to British Columbia — the mountain biking mecca —
+                riding some of the best downhill and enduro trails in the world.
+            </p>
+        </div>
+
+        <!-- tado° Product Engineer -->
+        <div class="mb-8">
+            <div class="mb-2">
+                <h3 class="text-xl font-semibold text-gray-800">Product Engineer</h3>
+                <p class="text-gray-600 text-sm">tado° | Munich | Feb 2020 - Feb 2025</p>
             </div>
             <p class="text-gray-700 mb-3">
                 Created, from idea through launch to monetisation with hundreds of subscriptions, two innovative products in the home energy management space:
-                <a href="https://www.theverge.com/2022/8/31/23330324/tado-balance-smart-thermostat-subscription-usage-energy-price" class="text-blue-600 hover:text-blue-800 underline">Balance</a>
-                and <a href="https://shop.tado.com/en/products/balance-for-heat-pumps" class="text-blue-600 hover:text-blue-800 underline">Balance for Heat Pumps.</a>
-
-                Directly responsible for all engineering aspects for both backend and frontend, e.g., choosing technologies, integrating the new product into the existing system landscape, and monetising the product with subscriptions.
-                Gradually increased product reliability by improving testing, monitoring, and alerting to match its growing impact on users and higher expectations for paid services.
+                <a href="https://www.theverge.com/2022/8/31/23330324/tado-balance-smart-thermostat-subscription-usage-energy-price" class="text-blue-600 hover:text-blue-800 underline">tado Balance</a>
+                and Balance for Heat Pumps. The first product was built by a team of six in two months.
             </p>
+            <p class="text-gray-700 mb-3">
+                Directly responsible for all engineering aspects — backend and frontend — including choosing technologies,
+                integrating the new product into the existing system landscape, and monetising with subscriptions.
+            </p>
+
+            <p class="text-gray-700 font-medium mt-4 mb-2">Product & Engineering</p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Directly responsible for all engineering aspects for both backend and frontend, e.g. choosing technologies, integrating the new product into the existing system landscape, and monetising the product with subscriptions.</li>
-                <li>Gradually increased product reliability by improving testing, monitoring, and alerting to match its growing impact on users and higher expectations for paid services.</li>
-                <li>Contributed to product and UX decisions by analysing the market, understanding users, identifying opportunities, and helping build and maintain the impact/effort matrix.</li>
-                <li>Helped the marketing team craft press releases and prepare presentations. Championed transparency and an "underpromise, overdeliver" approach.</li>
-                <li>Drove multiple (10+) customer interviews and developed an AI pipeline to automate creating summaries, saving myself and colleagues significant time (tens of minutes per interview).</li>
-                <li>Successfully advocated for replacing legacy hardware by quantifying long-term engineering and customer support costs and providing a compelling case for a one-time investment into HW replacement.</li>
-                <li>Participated in the redesign and refactoring of core backend systems to improve the maintainability of the platform used by the new hardware generation.</li>
-                <li>Regularly presented product progress, technical details, and learnings to diverse audiences, tailoring the message and incorporating feedback.</li>
-                <li>Facilitated knowledge-sharing sessions, both technical and business- related, for small and large audiences.</li>
-                <li>Conducted technical interviews and helped refine the hiring process by establishing an interview playbook used by multiple teams.</li>
+                <li>Gradually increased product reliability by improving testing, monitoring, and alerting to match the product's growing impact on users and higher expectations for paid services.</li>
+                <li>Built subscription management and integrated with app stores.</li>
+                <li>Designed APIs and internal system architecture. Prepared and managed migrations (Elasticsearch, Redis, MySQL).</li>
+                <li>Made architectural decisions to fit the new product into the existing landscape from both UX and technical perspectives.</li>
+                <li>Participated in the redesign and refactoring of core backend systems to improve platform maintainability for the new hardware generation.</li>
             </ul>
+
+            <p class="text-gray-700 font-medium mt-4 mb-2">Product Discovery & User Research</p>
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>Drove 10+ customer interviews. Developed skills in disarming frustrated users to keep meetings productive and close the feedback loop.</li>
+                <li>Did a 360° field visit: visited a partner's HQ and shadowed HVAC installers in the field to understand their workflows and needs, then summarised findings and converted them into product decisions.</li>
+                <li>Contributed to product and UX decisions by analysing the market, understanding users, identifying opportunities, and helping build and maintain the impact/effort matrix.</li>
+                <li>Championed transparency and an "underpromise, overdeliver" approach in product communication.</li>
+            </ul>
+
+            <p class="text-gray-700 font-medium mt-4 mb-2">Cross-functional Work</p>
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>Helped the marketing team craft press releases and prepare presentations.</li>
+                <li>Successfully advocated for replacing legacy hardware by quantifying long-term engineering and customer support costs and building a compelling case for a one-time investment.</li>
+                <li>Built an AI pipeline using Whisper and GPT to automate transcription and summarisation of customer interviews, saving significant time per interview.</li>
+                <li>Member of the sustainability team — calculating company emissions, working with logistics to reduce packaging size and materials.</li>
+            </ul>
+
+            <p class="text-gray-700 font-medium mt-4 mb-2">Knowledge Sharing & Hiring</p>
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>Regularly presented product progress, technical details, and learnings to diverse audiences (weekly demos to 50+ people in person, adjusting message to audience).</li>
+                <li>Facilitated knowledge-sharing sessions — both technical and business-related — for small and large audiences. Hosted and moderated "contributors' meetings," identifying aspects interesting to everyone and drawing them out with follow-up questions.</li>
+                <li>Led brown bag sessions on topics like EVs, indoor air quality, and personal finance.</li>
+                <li>Conducted technical interviews and experience days. Helped craft the interview guide/handbook, focusing on reasoning skills and real-world scenarios.</li>
+            </ul>
+            <p class="text-gray-500 text-sm mt-2">Tech: Angular 19 (declarative/reactive with signals), TypeScript, AWS API Gateway, Lambda, DynamoDB, SQS, SNS, SES, CloudFormation, CloudWatch, GitHub Actions</p>
         </div>
 
+        <!-- tado° SE IoT -->
         <div class="mb-8">
             <div class="mb-2">
-                <h3 class="text-xl font-semibold text-gray-800">Software Engineer</h3>
-                <p class="text-gray-600 text-sm">tado° | Aug 2018 - Feb 2020</p>
+                <h3 class="text-xl font-semibold text-gray-800">Senior Software Engineer IoT</h3>
+                <p class="text-gray-600 text-sm">tado° | Munich | Aug 2018 - Feb 2020</p>
             </div>
             <p class="text-gray-700 mb-3">
-                Development, scaling, and maintenance of a highly available cloud-based IoT platform that grew from tens of thousands to over a million connected devices.
+                Development, scaling, and maintenance of a highly available cloud-based IoT platform that grew from tens of
+                thousands to millions of connected devices.
             </p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Significantly improved system efficiency and reduced database and server cost through optimizing critical device data processing code.</li>
-                <li>Shaping the internal system architecture, designing internal and external APIs</li>
-                <li>Ensuring high code quality through rigorous reviews, robust test coverage, and establishing team coding standards.</li>
-                <li>Enhanced system reliability by refining monitoring and alerting and successfully managing critical data store migrations (Elasticsearch, MySQL) with minimal user impact.</li>
-                <li>Ensured high availability of core services through on-call duty. Managed critical production incidents, including customer communication, investigating root causes and writing post-mortems, and developing operational checklists to prevent recurrence.</li>
-                <li>Improved deployment velocity and reliability by speeding up test execution and improving developer experience by migrating CI/CD pipelines to GitHub Actions.</li>
-                <li>Provided technical analysis and implementation plans for new use cases and maintenance efforts, contributing to the scalability and usability of the platform.</li>
+                <li>Significantly improved system efficiency and reduced database and server costs by optimising critical device data processing code. Investigated performance issues in Spring Boot servers and identified bottlenecks in RDS, deciding on scaling approaches.</li>
+                <li>Shaped internal system architecture and designed internal and external APIs.</li>
+                <li>Ensured high code quality through rigorous reviews, robust test coverage, and establishing team coding standards.</li>
+                <li>Enhanced system reliability by refining monitoring and alerting. Successfully managed critical data store migrations (Elasticsearch, MySQL) with minimal user impact.</li>
+                <li>2 years of on-call duty for critical infrastructure, combined with 3rd level support for the CX team — figuring out what is a bug vs. a feature, writing issues for fixes and features, updating the status page, writing post-mortems, presenting learnings at tech demos, helping build monitoring and alerting, deciding on important metrics, and preparing emergency checklists.</li>
+                <li>Managed critical production incidents including customer communication, root cause investigation, and developing operational checklists to prevent recurrence.</li>
+                <li>Improved deployment velocity and reliability by speeding up test execution and migrating CI/CD pipelines to GitHub Actions.</li>
+                <li>Provided technical analysis and implementation plans for new use cases and maintenance efforts.</li>
             </ul>
+            <p class="text-gray-500 text-sm mt-2">Tech: Java, Kotlin, Groovy, Spring Boot, Redis, Amazon Kinesis, RDS, InfluxDB, Jenkins, Datadog</p>
         </div>
 
         <!-- Zooplus AG -->
         <div class="mb-8">
             <div class="mb-2">
                 <h3 class="text-xl font-semibold text-gray-800">Software Engineer</h3>
-                <p class="text-gray-600 text-sm">Zooplus AG | Munich, Germany | Aug 2016 - Jul 2018</p>
+                <p class="text-gray-600 text-sm">Zooplus AG | Munich | Aug 2016 - Jul 2018</p>
             </div>
             <p class="text-gray-700 mb-3">
-                Working closely with domain experts from logistics and finance to develop solutions for optimizing truck routes and
-                streamlining accounting processes.
+                Worked closely with domain experts from logistics and finance to develop solutions for optimising truck routes
+                and streamlining accounting processes. Contributed to a new ledger project.
             </p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Focus on understanding core requirements and driving iterative approaches to develop effective, user-focused solutions</li>
-                <li>Organizing company-wide brown bag sessions to foster technical discussions and share knowledge across teams and departments</li>
+                <li>Focus on understanding core requirements and driving iterative approaches to develop effective, user-focused solutions.</li>
+                <li>Organised company-wide brown bag sessions to foster technical discussions and share knowledge across teams and departments.</li>
             </ul>
+            <p class="text-gray-500 text-sm mt-2">Tech: Java, Spring Boot, AWS (RDS, SQS, SNS, Kinesis), Terraform, Mesos, Grafana, Kibana</p>
         </div>
 
         <!-- Luxoft (UBS) -->
@@ -118,28 +345,31 @@
                 <p class="text-gray-600 text-sm">Luxoft (UBS) | Kraków, Poland | Aug 2015 - Jul 2016</p>
             </div>
             <p class="text-gray-700 mb-3">
-                Contributed to creating and improving a critical application ensuring regulatory compliance.
+                Contributed to creating and improving a critical application ensuring regulatory compliance for UBS.
             </p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Emphasized clean coding practices and disciplined test-driven development approach</li>
-                <li>Participated in rigorous code reviews</li>
-                <li>Worked with strict availability and performance requirements</li>
+                <li>Emphasised clean coding practices and disciplined test-driven development approach.</li>
+                <li>Participated in rigorous code reviews.</li>
+                <li>Worked with strict availability and performance requirements.</li>
             </ul>
+            <p class="text-gray-500 text-sm mt-2">Tech: Java, Spring</p>
         </div>
 
-        <!-- Ericpol -->
+        <!-- Ericpol (Ericsson) -->
         <div class="mb-8">
             <div class="mb-2">
                 <h3 class="text-xl font-semibold text-gray-800">Junior Software Engineer</h3>
-                <p class="text-gray-600 text-sm">Ericpol | Kraków, Poland | Jul 2014 - Jul 2015</p>
+                <p class="text-gray-600 text-sm">Ericpol (Ericsson) | Kraków, Poland | Jul 2014 - Jul 2015</p>
             </div>
             <p class="text-gray-700 mb-3">
                 Contributed to building a highly available and dynamically scalable IAM solution for a network management system.
             </p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Acted as a Scrum Master, driving various team and department meetings including for geographically distributed teams</li>
-                <li>Onboarded new joiners to the business domain and technical details of the system</li>
+                <li>Acted as Scrum Master, driving various team and department meetings including for geographically distributed teams.</li>
+                <li>Travelled to Ericsson's site in Ireland to interface with teams there, learn more about the product, and solve issues ad hoc.</li>
+                <li>Onboarded new joiners to the business domain and technical details of the system.</li>
             </ul>
+            <p class="text-gray-500 text-sm mt-2">Tech: Java (Ericsson frameworks and internal tooling)</p>
         </div>
 
         <!-- Tegeos -->
@@ -149,11 +379,14 @@
                 <p class="text-gray-600 text-sm">Tegeos | Kraków, Poland | Apr 2013 - Jun 2014</p>
             </div>
             <p class="text-gray-700 mb-3">
-                Created an innovative and highly accurate measurement devices for materials science laboratories.
+                Created innovative and highly accurate measurement devices for materials science laboratories. The devices measured
+                the Seebeck effect coefficient distribution across material samples, using image processing to assess sample uniformity
+                and an automated test stand for physical property measurement. This doubled as my MSc thesis work — combining image
+                processing with physical measurement automation.
             </p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Defined device parameters based on market demand to ensure product-market fit</li>
-                <li>Marketed the product at an industry conference to find first customers</li>
+                <li>Defined device parameters based on market demand to ensure product-market fit.</li>
+                <li>Marketed the product at an industry conference to find first customers.</li>
             </ul>
         </div>
 
@@ -164,7 +397,8 @@
                 <p class="text-gray-600 text-sm">Universidad Politécnica de Madrid | Madrid, Spain | Jul 2012 - Aug 2012</p>
             </div>
             <p class="text-gray-700 mb-3">
-                Implemented software tools for early diagnosis of pulmonary hypertension through 4D flow MRI analysis.
+                Implemented software tools for early diagnosis of pulmonary hypertension through 4D flow MRI analysis — detecting
+                vortices in blood flow patterns to identify arterial hypertension.
             </p>
         </div>
 
@@ -184,37 +418,83 @@
     <section class="mb-12">
         <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Education</h2>
 
-        <!-- AGH -->
         <div class="mb-8">
             <div class="mb-2">
                 <h3 class="text-xl font-semibold text-gray-800">M.Sc. Automation and Robotics</h3>
-                <p class="text-gray-600 text-sm">AGH University of Science and Technology, Cracow (Poland) | 2012 - 2014</p>
+                <p class="text-gray-600 text-sm">AGH University of Science and Technology, Kraków (Poland) | 2012 - 2014</p>
             </div>
             <p class="text-gray-700 mb-3">
-                Focus on image processing for medical applications.
+                Thesis completed in collaboration with Tegeos: image processing for detecting material sample uniformity (Seebeck
+                effect coefficient distribution) and building an automated test stand for physical property measurement. Originally
+                started as image processing for detecting pulmonary arterial hypertension using 4D MRI flow imaging (detecting
+                vortices in blood flow), then pivoted to the Tegeos collaboration.
+            </p>
+            <p class="text-gray-700">
+                Coursework at TU Berlin (Erasmus, 2012–2013) focused on image processing, FPGAs, and control systems.
             </p>
         </div>
 
-        <!-- TUB -->
         <div class="mb-8">
             <div class="mb-2">
-                <h3 class="text-xl font-semibold text-gray-800">Earlier Degree/Certification</h3>
+                <h3 class="text-xl font-semibold text-gray-800">B.Sc. Automation and Robotics</h3>
+                <p class="text-gray-600 text-sm">AGH University of Science and Technology, Kraków (Poland) | 2008 - 2013</p>
+            </div>
+            <p class="text-gray-700 mb-3">
+                Thesis on visualising protein folding.
+            </p>
+        </div>
+
+        <div class="mb-8">
+            <div class="mb-2">
+                <h3 class="text-xl font-semibold text-gray-800">Erasmus Programme</h3>
                 <p class="text-gray-600 text-sm">Technische Universität Berlin, Berlin (Germany) | 2012 - 2013</p>
             </div>
             <p class="text-gray-700 mb-3">
-                Erasmus programme.
+                Image processing, FPGAs, control systems.
             </p>
+        </div>
+    </section>
+
+    <!-- Certifications, Languages, Tech Stack -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Certifications</h2>
+        <ul class="list-disc pl-5 text-gray-700">
+            <li>Java SE 8 Programmer I</li>
+            <li>Professional Scrum Master I</li>
+        </ul>
+    </section>
+
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Languages</h2>
+        <ul class="list-disc pl-5 text-gray-700">
+            <li>Polish (native)</li>
+            <li>English (full professional proficiency)</li>
+            <li>German (limited working proficiency)</li>
+        </ul>
+    </section>
+
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Tech Stack</h2>
+        <div class="space-y-2 text-gray-700">
+            <p><span class="font-semibold">Frontend:</span> React (latest), Angular 19 (signals, declarative/reactive), TypeScript</p>
+            <p><span class="font-semibold">Backend:</span> Python, TypeScript (Lambda), Java, Kotlin, Groovy, Spring Boot</p>
+            <p><span class="font-semibold">AWS:</span> Lambda, API Gateway, DynamoDB, SQS, SNS, SES, Kinesis, RDS, CloudFormation, CloudWatch</p>
+            <p><span class="font-semibold">Infrastructure:</span> Terraform, CloudFormation, GitHub Actions, Jenkins</p>
+            <p><span class="font-semibold">Data stores:</span> DynamoDB, Redis, RDS (MySQL), InfluxDB, Elasticsearch</p>
+            <p><span class="font-semibold">AI/ML:</span> Claude API, Ultralytics YOLO (v26, CPU-optimised Lambda deployment), OpenAI API (Whisper, GPT), prompt engineering, production AI pipelines with guardrails and testbenches, agentic workflows</p>
+            <p><span class="font-semibold">Monitoring:</span> Datadog, CloudWatch</p>
+            <p><span class="font-semibold">Other:</span> Git, GitHub, CI/CD pipeline design</p>
         </div>
     </section>
 
     <!-- Gallery Section -->
     <section class="mb-12">
         <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Gallery</h2>
-        
+
         <div class="relative max-w-3xl mx-auto">
             <!-- Main Image Container -->
             <div class="relative h-[720px] overflow-hidden rounded-lg shadow-lg bg-gray-100">
-                <img 
+                <img
                     id="galleryImage"
                     src=""
                     alt="Gallery image"
@@ -222,7 +502,7 @@
                     onload="this.style.opacity='1'"
                     style="opacity: 0; transition: opacity 0.3s ease-in-out;"
                 />
-                
+
                 <!-- Navigation Buttons -->
                 <button
                     id="prevButton"
@@ -234,7 +514,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
                 </button>
-                
+
                 <button
                     id="nextButton"
                     onclick="changeImage(1)"
@@ -246,7 +526,7 @@
                     </svg>
                 </button>
             </div>
-            
+
             <!-- Image Counter -->
             <div id="imageCounter"
                  class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm opacity-0">
@@ -257,7 +537,7 @@
 
     <!-- Footer -->
     <footer class="text-center text-gray-600 text-sm pt-8 border-t border-gray-200">
-        <p>© 2025 Maciej Piekarski. All rights reserved.</p>
+        <p>&copy; 2025 Maciej Piekarski. All rights reserved.</p>
     </footer>
 </div>
 
@@ -270,7 +550,7 @@
         const imgElement = document.getElementById('galleryImage');
         // Start fade out
         imgElement.style.opacity = '0';
-        
+
         setTimeout(() => {
             currentImageIndex = currentImageIndex + direction;
             if (currentImageIndex > totalImages) {
@@ -337,3 +617,4 @@
     initGallery();
 </script>
 </body>
+</html>
