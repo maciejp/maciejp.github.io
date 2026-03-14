@@ -24,9 +24,10 @@
             I love understanding problems and building solutions. In this order.
         </p>
         <p class="text-gray-700 leading-relaxed mt-3">
-            From helping my teams understand user needs, through defining requirements to building robust technical
-            solutions, I approach product engineering with a focus on clarity and precision. I enjoy tackling complex
-            problems by breaking them down and developing iterative, user-centric solutions that deliver tangible value.
+            I can walk you through a product from user pain points and how we address them, through the business case,
+            UX decisions, frontend and backend architecture, infrastructure, all the way to choice of database. I'm not
+            a domain expert in all of these - I rely on specialists when depth is needed - but I understand how decisions
+            in one layer affect the others, and I can link those segments together efficiently.
         </p>
         <p class="text-gray-700 leading-relaxed mt-3">
             My experience spans the full product lifecycle. I have been responsible for greenfield experiments that
@@ -52,8 +53,10 @@
     <section class="mb-12">
         <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">How I Think About Building Products</h2>
         <p class="text-gray-700 leading-relaxed mb-4">
-            I hold strong opinions, loosely held. I'm always happy to adjust my thinking when presented with compelling
-            arguments - but I'd rather start from a clear position than from vague consensus.
+            Strong opinions, loosely held. I'd rather start from a clear position than from vague consensus. I
+            proactively share my viewpoints, tradeoffs and issues I see with decision makers - but I believe in "disagree
+            and commit." If the team decides to go a different way, I trust their judgement and get behind it. I hate
+            never-ending discussions.
         </p>
 
         <div class="space-y-4">
@@ -94,7 +97,7 @@
                 <p class="text-gray-700 leading-relaxed">
                     <span class="font-semibold">Responsibility doesn't diffuse.</span>
                     When I use agentic workflows, it's still me who's responsible for my commits. If a commit crafted by Claude
-                    breaks production and causes financial losses, it's on me, not on Claude. No "it was the tool, not me"  -
+                    breaks production and causes financial losses, it's on me, not on Claude. No "it was the tool, not me" -
                     my mistake, I own it.
                 </p>
             </div>
@@ -110,18 +113,30 @@
     <section class="mb-12">
         <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">How I Work With People</h2>
         <p class="text-gray-700 leading-relaxed">
-            I'm an individual contributor who leads through influence rather than authority. I recently mentored a more junior
-            colleague who appreciated my style: giving a lot of freedom while providing guidance when necessary and strong
-            opinions to prevent derailing - focused on measurable progress and delivering goals on time.
+            I'm an individual contributor who leads through influence rather than authority. When mentoring, I give a lot of
+            freedom while providing guidance when necessary and strong opinions to prevent derailing. A recent example: a
+            colleague I mentored said they appreciated this style - the focus on measurable progress and delivering goals on
+            time without micromanaging.
         </p>
         <p class="text-gray-700 leading-relaxed mt-3">
-            I push for transparency and honesty about what products do and how they work. I'd rather have a smaller, accurate
-            promise than a big, hollow one - even if that puts us at a disadvantage compared to competitors who are less careful
-            with their marketing.
+            I care about talking to users directly. I've conducted dozens of customer interviews, including with frustrated users
+            where the first job is to disarm the frustration and keep the meeting productive. I've gone out into the field to shadow
+            professionals using our products in their daily work, then brought those observations back and turned them into product
+            decisions. I try to close the feedback loop whenever possible.
         </p>
         <p class="text-gray-700 leading-relaxed mt-3">
-            I've stood on stage presenting products at conferences and to 50+ person audiences at weekly demos. The first
-            minute is stressful, but once I'm in, I enjoy it.
+            I enjoy sharing what I learn. I've regularly presented to audiences of 50+ people at weekly product demos, led brown bag
+            sessions on topics both technical and not, and hosted cross-team meetings where my job was to draw out the interesting
+            bits by asking the right follow-up questions. The first minute on stage is always stressful, but once I'm in, I enjoy it.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            I've helped shape hiring processes by co-writing interview guides and conducting technical interviews focused on
+            reasoning skills and real-world scenarios rather than trivia.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-3">
+            I'm a terrible salesperson, unless I believe in the product. Then I try to bring that honesty into how we
+            communicate about it - working with marketing and sales colleagues to keep our promises accurate and our
+            messaging grounded.
         </p>
     </section>
 
@@ -134,9 +149,8 @@
         <p class="text-gray-700 leading-relaxed mt-3">
             At Wemolo, I introduced Claude into a production image analysis pipeline to detect anomalies. This required building
             a testbench to provide guardrails and tune a non-deterministic system to behave consistently enough for production use.
-            The pipeline uses Ultralytics YOLO for image pre-processing to provide guidance to the model, and I experimented with
-            various approaches and models to get reliable results. I also deployed Ultralytics models directly in AWS Lambda (v26
-            runs well on CPUs, delivering decent results without GPU infrastructure).
+            The pipeline uses Ultralytics YOLO and Meta SAM for image pre-processing to provide guidance to the model, and I
+            experimented with various approaches and models to get reliable results.
         </p>
         <p class="text-gray-700 leading-relaxed mt-3">
             Earlier, at tado°, I built one of the first practical AI pipelines on my team: a script using Whisper for transcription
@@ -148,7 +162,7 @@
     <!-- Side Projects -->
     <section class="mb-12">
         <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">Side Projects</h2>
-        <p class="text-gray-700 leading-relaxed mb-4">A few recent examples:</p>
+        <p class="text-gray-700 leading-relaxed mb-4">I don't have any advanced, published personal projects, but I frequently build small tools to help me in my personal life. A few recent examples:</p>
         <div class="space-y-4">
             <div>
                 <p class="text-gray-700 leading-relaxed">
@@ -226,10 +240,10 @@
             <ul class="list-disc pl-5 text-gray-700">
                 <li>Set the project up from scratch, converting a scrappy PoC (infra clicked out in the AWS console, code modified directly on lambdas) into a production-ready system. This involved defining infrastructure as code with Terraform, building the serverless backend and frontend, configuring Auth0 for authentication, and creating a full stack aligned with company standards that gives a lot of flexibility to iterate.</li>
                 <li>Introduced Claude into a production image analysis pipeline for anomaly detection. Built a testbench to provide guardrails and tune the non-deterministic system for consistent production behaviour. Pre-processing with Ultralytics YOLO to provide guidance, experimenting with various approaches and models.</li>
-                <li>Deployed Ultralytics YOLO models in AWS Lambda (v26 optimised for CPU, delivering solid results without GPU infrastructure) as a proof of concept.</li>
+                <li>Evaluated and deployed Ultralytics YOLO and Meta SAM models, figuring out how to run them cost-effectively in a way that fits the project's existing serverless infrastructure.</li>
                 <li>Designing the architecture for the next-generation device platform - edge AI processing combined with cloud-based VLMs for more complex analysis.</li>
             </ul>
-            <p class="text-gray-500 text-sm mt-2">Tech: React, Python, AWS Lambda, Terraform, Ultralytics YOLO, Claude API</p>
+            <p class="text-gray-500 text-sm mt-2">Tech: React, Python, AWS Lambda, Terraform, Ultralytics YOLO, Meta SAM, Claude API</p>
         </div>
 
         <!-- Sabbatical -->
@@ -271,15 +285,13 @@
 
             <p class="text-gray-700 font-medium mt-4 mb-2">Product Discovery & User Research</p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Drove 10+ customer interviews. Developed skills in disarming frustrated users to keep meetings productive and close the feedback loop.</li>
-                <li>Did a 360° field visit: visited a partner's HQ and shadowed HVAC installers in the field to understand their workflows and needs, then summarised findings and converted them into product decisions.</li>
+                <li>Drove 10+ customer interviews, did a 360° field visit shadowing HVAC installers at a partner's HQ to understand their workflows and needs.</li>
                 <li>Contributed to product and UX decisions by analysing the market, understanding users, identifying opportunities, and helping build and maintain the impact/effort matrix.</li>
-                <li>Championed an "underpromise, overdeliver" approach in product communication and marketing.</li>
             </ul>
 
             <p class="text-gray-700 font-medium mt-4 mb-2">Cross-functional Work</p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Helped the marketing team craft press releases and prepare presentations.</li>
+                <li>Helped the marketing team craft press releases and prepare presentations. Championed an "underpromise, overdeliver" approach.</li>
                 <li>Successfully advocated for replacing legacy hardware by quantifying long-term engineering and customer support costs and building a compelling case for a one-time investment.</li>
                 <li>Built an AI pipeline using Whisper and GPT to automate transcription and summarisation of customer interviews, saving significant time per interview.</li>
                 <li>Member of the sustainability team - calculating company emissions, working with logistics to reduce packaging size and materials.</li>
@@ -287,10 +299,8 @@
 
             <p class="text-gray-700 font-medium mt-4 mb-2">Knowledge Sharing & Hiring</p>
             <ul class="list-disc pl-5 text-gray-700">
-                <li>Regularly presented product progress, technical details, and learnings to diverse audiences (weekly demos to 50+ people in person, adjusting message to audience).</li>
-                <li>Facilitated knowledge-sharing sessions - both technical and business-related - for small and large audiences. Hosted and moderated "contributors' meetings," identifying aspects interesting to everyone and drawing them out with follow-up questions.</li>
-                <li>Led brown bag sessions on topics like EVs, indoor air quality, and personal finance.</li>
-                <li>Conducted technical interviews and experience days. Helped craft the interview guide/handbook, focusing on reasoning skills and real-world scenarios.</li>
+                <li>Weekly product demos, cross-team knowledge-sharing sessions, brown bag sessions, contributors' meetings (see How I Work With People above).</li>
+                <li>Conducted technical interviews and experience days. Helped craft the interview guide/handbook.</li>
             </ul>
             <p class="text-gray-500 text-sm mt-2">Tech: Angular 19 (declarative/reactive with signals), TypeScript, AWS API Gateway, Lambda, DynamoDB, SQS, SNS, SES, CloudFormation, CloudWatch, GitHub Actions</p>
         </div>
@@ -422,12 +432,7 @@
             </div>
             <p class="text-gray-700 mb-3">
                 Thesis completed in collaboration with Tegeos: image processing for detecting material sample uniformity (Seebeck
-                effect coefficient distribution) and building an automated test stand for physical property measurement. Originally
-                started as image processing for detecting pulmonary arterial hypertension using 4D MRI flow imaging (detecting
-                vortices in blood flow), then pivoted to the Tegeos collaboration.
-            </p>
-            <p class="text-gray-700">
-                Coursework at TU Berlin (Erasmus, 2012–2013) focused on image processing, FPGAs, and control systems.
+                effect coefficient distribution) and building an automated test stand for physical property measurement.
             </p>
         </div>
 
@@ -478,7 +483,7 @@
             <p><span class="font-semibold">AWS:</span> Lambda, API Gateway, DynamoDB, SQS, SNS, SES, Kinesis, RDS, CloudFormation, CloudWatch</p>
             <p><span class="font-semibold">Infrastructure:</span> Terraform, CloudFormation, GitHub Actions, Jenkins</p>
             <p><span class="font-semibold">Data stores:</span> DynamoDB, Redis, RDS (MySQL), InfluxDB, Elasticsearch</p>
-            <p><span class="font-semibold">AI/ML:</span> Claude API, Ultralytics YOLO (v26, CPU-optimised Lambda deployment), OpenAI API (Whisper, GPT), prompt engineering, production AI pipelines with guardrails and testbenches, agentic workflows</p>
+            <p><span class="font-semibold">AI/ML:</span> Claude API, Ultralytics YOLO, Meta SAM, prompt engineering, production AI pipelines with guardrails and testbenches, agentic workflows</p>
             <p><span class="font-semibold">Monitoring:</span> Datadog, CloudWatch</p>
             <p><span class="font-semibold">Other:</span> Git, GitHub, CI/CD pipeline design</p>
         </div>
