@@ -64,10 +64,12 @@
                 <p class="text-gray-700 leading-relaxed">
                     <span class="font-semibold">Keep things as simple as possible, but not simpler.</span>
                     The majority of problems don't require solutions that scale to millions of users. Solve today's problems.
-                    Be aware of what might block you in 12 months if things scale as expected - but don't solve that yet.
-                    Know where you cut corners, but don't immediately fix those places either. Martin Fowler's thinking on
-                    evolutionary design resonates with me - let the architecture emerge from real needs, not from speculation
-                    about future ones.
+                    Be aware of what might block you in 12 months if things scale as expected - plan ahead enough to not paint
+                    yourself into a corner, but don't build for problems you don't have yet. Know where you cut corners, but
+                    don't immediately fix those places either. Martin Fowler's thinking on evolutionary design resonates with
+                    me - let the architecture emerge from real needs, not from speculation about future ones. That said, when
+                    I have owned systems at scale, I've had to plan ahead deliberately - the key is knowing when to invest
+                    in structure and when to keep things simple.
                 </p>
             </div>
             <div>
@@ -130,8 +132,12 @@
             bits by asking the right follow-up questions. The first minute on stage is always stressful, but once I'm in, I enjoy it.
         </p>
         <p class="text-gray-700 leading-relaxed mt-3">
-            I've helped shape hiring processes by co-writing interview guides and conducting technical interviews focused on
-            reasoning skills and real-world scenarios rather than trivia.
+            I care about making other engineers more effective. At Wemolo, I rebuilt the CI pipeline to cut unnecessary
+            complexity and advocated for other teams to adopt similar practices. I've co-written interview guides that are
+            used across teams, and I conduct technical interviews focused on reasoning skills and real-world scenarios rather
+            than trivia. I actively share what I learn about agentic workflows, prompt engineering, and AI tooling with
+            colleagues - because one person being productive with agents is useful, but a whole team being productive with
+            them is a multiplier.
         </p>
         <p class="text-gray-700 leading-relaxed mt-3">
             I'm a terrible salesperson, unless I believe in the product. Then I try to bring that honesty into how we
@@ -236,6 +242,8 @@
             <p class="text-gray-700 mb-3">
                 Together with a small army of robots (mostly Claudes), I am responsible for infrastructure, CI/CD, backend,
                 frontend, communication with IoT devices - and anything else required to solve user problems as fast as possible.
+                Beyond my own project, I share what I learn about working with agents - from reading and experimentation - with
+                other people and teams, helping them become more productive with these tools too.
             </p>
             <ul class="list-disc pl-5 text-gray-700">
                 <li>Set the project up from scratch, converting a scrappy PoC (infra clicked out in the AWS console, code modified directly on lambdas) into a production-ready system. This involved defining infrastructure as code with Terraform, building the serverless backend and frontend, configuring Auth0 for authentication, and creating a full stack aligned with company standards that gives a lot of flexibility to iterate.</li>
@@ -313,8 +321,10 @@
                 <p class="text-gray-600 text-sm">tado° | Munich | Aug 2018 - Feb 2020</p>
             </div>
             <p class="text-gray-700 mb-3">
-                Development, scaling, and maintenance of a highly available cloud-based IoT platform that grew from tens of
-                thousands to millions of connected devices.
+                Owned a critical part of a cloud-based IoT platform serving millions of connected devices - responsible for
+                its reliability, scaling, and evolution from tens of thousands to millions of connections. This meant
+                understanding the system deeply enough to make architectural decisions about data pipelines, caching layers,
+                and database scaling under real production pressure.
             </p>
             <ul class="list-disc pl-5 text-gray-700">
                 <li>Significantly improved system efficiency and reduced database and server costs by optimising critical device data processing code. Investigated performance issues in Spring Boot servers and identified bottlenecks in RDS, deciding on scaling approaches.</li>
